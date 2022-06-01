@@ -1,19 +1,16 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-int num, rem, Largest= 0;
-scanf ("%d", &num);
-
-while (num > 0)
+    int rem,n,max=0;
+    scanf("%d",&n);
+    while(n!=0)
     {
-  rem = num % 10;
-    if (Largest < rem)
-      {
-       Largest = rem;
-      }
-  num = num / 10;
+        rem=n%10;
+        n/=10;
+        if(rem>max)
+        {
+            max=rem;
+        }
     }
-printf ("%d", Largest);
-return 0;
+    printf("%d",max);
 }
-
