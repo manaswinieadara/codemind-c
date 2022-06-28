@@ -1,23 +1,23 @@
 #include<stdio.h>
-int digitsum(int n)
+int add_digit(int n)
 {
-    int sum=0;
-    while(sum>9||n>0)
+    int d,sum=0;
+    while(n!=0)
     {
-        if(n==0)
-        {
-            n=sum;
-            sum=0;
-        }
-        sum+=n%10;
-        n/=10;
+        d=n%10;
+        n=n/10;
+        sum=sum+d;
     }
-    return sum;
-    
+    if(sum<10)
+    {
+        return sum;
+    }
+    return add_digit(sum);
 }
 int main()
 {
-    int n;
+    int n,k;
     scanf("%d",&n);
-    printf("%d",digitsum(digitsum(n)));
+    k=add_digit(n);
+    printf("%d",k);
 }
