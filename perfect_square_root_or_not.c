@@ -2,14 +2,17 @@
 #include<math.h>
 int main()
 {
-    int a;
-    float b;
-    scanf("%d",&a);
-    b=sqrt((double)a);
-    a=b;
-    if(a==b)
-    printf("True");
+    int m,n;
+    float p;
+    scanf("%d",&n);
+    p=sqrt(n);
+    m=p;
+    if(m==p)
+    {
+        printf("True");
+    }
     else
-    printf("False");
-    return 0;
+    {
+        printf("False");
+    }
 }
