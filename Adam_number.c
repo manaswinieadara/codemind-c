@@ -1,27 +1,26 @@
 #include<stdio.h>
-int main()
+int reverse(int n)
 {
-    int n,sq,rev=0,qs,d,s,v=0;
-    scanf("%d",&n);
-    sq=n*n;
+    int d,rev=0;
     while(n!=0)
     {
         d=n%10;
-        n=n/10;
         rev=rev*10+d;
-        
+        n=n/10;
     }
-    qs=rev*rev;
-    while(qs!=0)
-    {
-        s=qs%10;
-        qs=qs/10;
-        v=v*10+s;
-    }
-    if(sq==v)
+    return rev;
+}
+int main()
+{
+    int n,s,r,m,k;
+    scanf("%d",&n);
+    s=n*n;
+    r=reverse(n);
+    m=r*r;
+    k=reverse(m);
+    if(s==k)
     {
         printf("True");
-        
     }
     else
     {
