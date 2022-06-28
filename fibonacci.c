@@ -1,18 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int count,first_term=0,second_term=1,next_term,i;
-    scanf("%d",&count);
-    for(i=0;i<count;i++)
+    int n,a=0,b=1,c,i;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
-        if(i<=1)
-        {
-            next_term=i;
-        }
-        else
-        next_term=first_term+second_term;
-        first_term=second_term;
-        second_term=next_term;
-        printf("%d ",next_term);
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+        
     }
+    return 0;
 }
